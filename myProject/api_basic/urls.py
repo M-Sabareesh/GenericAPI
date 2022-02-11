@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path
 from .views import article_list, article_detail, ArticleAPIView, ArticleDetailAPIView, GenericArticleAPIView
 
+#Initial upload
 urlpatterns = [
     #path('article/', article_list),
     path('article/', ArticleAPIView.as_view()),
