@@ -23,13 +23,12 @@ router.register('article', ArticleModelViewSet, basename='article')
 
 #Initial upload
 urlpatterns = [
-    path('viewset/', include(router.urls)),
-    path('viewset/<int:pk>/', include(router.urls)),
     #path('article/', article_list),
     path('article/', ArticleAPIView.as_view()),
     #path('detail/<int:pk>/', article_detail),
     path('detail/<int:id>/', ArticleDetailAPIView.as_view()),
     path('generic/article/<int:id>/', GenericArticleAPIView.as_view()),
     path('generic/article/', GenericArticleAPIView.as_view()),
-    
+    path('viewset/', include(router.urls)),
+    path('viewset/<int:pk>/', include(router.urls)),
 ]
