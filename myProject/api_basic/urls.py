@@ -30,5 +30,5 @@ urlpatterns = [
     path('generic/article/<int:id>/', GenericArticleAPIView.as_view()),
     path('generic/article/', GenericArticleAPIView.as_view()),
     path('viewset/', include(router.urls)),
-    path('viewset/<int:pk>/', include(router.urls)),
+    path('viewset/<int:pk>/',include(router.urls)),
 ]
